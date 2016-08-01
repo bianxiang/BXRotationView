@@ -1,8 +1,8 @@
 # BXRotationView
 
 ##  作者:卞翔
-##  联系qq:712641411
-##  QQ交流群:1023537528
+##  联系qq:1023537528
+##  QQ交流群:160603792
 
 ## BXRotationView: 一个简单易用的开奖翻转实现
 
@@ -29,7 +29,7 @@ class ViewController: UIViewController,BXRotationViewDelegate {
 
     rotationView.first.image = UIImage(named: "1.jpg")
     rotationView.second.image = UIImage(named: "2.jpg")
-    //        rotationView.delega
+    
     self.view.addSubview(rotationView)
 
 

@@ -26,7 +26,7 @@ class ViewController: UIViewController,BXRotationViewDelegate {
         
         rotationView.first.image = UIImage(named: "1.jpg")
         rotationView.second.image = UIImage(named: "2.jpg")
-//        rotationView.delega
+        
         self.view.addSubview(rotationView)
         
         
