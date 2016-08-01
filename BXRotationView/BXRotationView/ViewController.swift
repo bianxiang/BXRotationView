@@ -36,7 +36,7 @@ class ViewController: UIViewController,BXRotationViewDelegate {
         
 //        bx.first.image = UIImage(named: "1.jpg")
 //        bx.second.image = UIImage(named: "2.jpg")
-        
+//        bx.delegate = self
         
     }
     
