@@ -21,7 +21,7 @@ class ViewController: UIViewController,BXRotationViewDelegate {
          *  代码使用方法
          */
         
-        let rotationView = BXRotationView(frame: CGRectMake(100, 100, 200, 200))
+        let rotationView = BXRotationView(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
         rotationView.delegate = self
         
         rotationView.first.image = UIImage(named: "1.jpg")
@@ -41,7 +41,7 @@ class ViewController: UIViewController,BXRotationViewDelegate {
     }
     
     
-    func bxRotationViewDidSelected(result: String) {
+    func bxRotationViewDidSelected(_ result: String) {
         print(result)
     }
 

@@ -13,7 +13,7 @@ import UIKit
  */
 protocol BXRotationViewDelegate{
     
-     func bxRotationViewDidSelected(result:String)
+     func bxRotationViewDidSelected(_ result:String)
 }
 
 class BXRotationView: UIView {
@@ -43,14 +43,14 @@ class BXRotationView: UIView {
         self.setup()
     }
     func setup(){
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
         
-        second = UIImageView(frame: CGRectMake(0, 0, self.frame.width, self.frame.height))
+        second = UIImageView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         self.addSubview(second)
-        second.hidden = true
+        second.isHidden = true
         second.layer.transform = CATransform3DRotate(self.layer.transform,CGFloat(M_PI) , 0, 1, 0)
         
-        first = UIImageView(frame: CGRectMake(0, 0, self.frame.width, self.frame.height))
+        first = UIImageView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         self.addSubview(first)
         
         
@@ -68,19 +68,19 @@ class BXRotationView: UIView {
             return
         }
         
-        UIView.animateWithDuration(1.0) {
+        UIView.animate(withDuration: 1.0, animations: {
             self.layer.transform = CATransform3DRotate(self.layer.transform,CGFloat(M_PI) , 0, 1, 0)
             
             
-        }
-        self.performSelector(#selector(BXRotationView.changeImage), withObject: nil, afterDelay: 0.5)
+        }) 
+        self.perform(#selector(BXRotationView.changeImage), with: nil, afterDelay: 0.5)
         
         hasTurnover = true
         
     }
     func changeImage() {
-        first.hidden = true
-        second.hidden = false
+        first.isHidden = true
+        second.isHidden = false
         
         self.delegate?.bxRotationViewDidSelected("已翻开!")
     }
